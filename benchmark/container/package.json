@@ -17,7 +17,7 @@
     "bench": "bun test test/bench.test.ts"
   },
   "dependencies": {
-    "@distilled.cloud/aws": "workspace:*",
+    "@distilled.cloud/aws": "catalog:",
     "@effect/platform-bun": "catalog:",
     "@effect/platform-node": "catalog:",
     "alchemy": "workspace:*",

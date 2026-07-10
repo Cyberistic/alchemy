@@ -37,22 +37,10 @@
   },
   "references": [
     {
-      "path": "../../distilled/packages/aws/tsconfig.json"
-    },
-    {
       "path": "../../distilled/packages/cloudflare/tsconfig.json"
     },
     {
-      "path": "../../distilled/packages/planetscale/tsconfig.json"
-    },
-    {
       "path": "../../distilled/packages/core/tsconfig.json"
-    },
-    {
-      "path": "../../distilled/packages/neon/tsconfig.json"
-    },
-    {
-      "path": "../../distilled/packages/axiom/tsconfig.json"
     }
   ]
 }

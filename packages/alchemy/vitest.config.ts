@@ -106,8 +106,18 @@ function distilledSrcResolver(): Plugin {
   return {
     name: "distilled-src-resolver",
     enforce: "pre",
-    resolveId(source) {
+    resolveId(source, importer) {
       if (!source.startsWith(prefix)) return null;
+      // npm-nested distilled packages (e.g. @distilled.cloud/neon's own
+      // @distilled.cloud/core) must resolve against their OWN nested copy,
+      // not the workspace package of the same name.
+      if (
+        importer
+          ?.replace(/\\/g, "/")
+          .includes("node_modules/.bun/@distilled.cloud+")
+      ) {
+        return null;
+      }
       const [pkg, ...rest] = source.slice(prefix.length).split("/");
       const exports = loadExports(pkg);
       if (!exports) return null;
