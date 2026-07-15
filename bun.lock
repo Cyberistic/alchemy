@@ -666,6 +666,9 @@
       },
     },
   },
+  "patchedDependencies": {
+    "@distilled.cloud/core@0.28.2": "patches/@distilled.cloud%2Fcore@0.28.2.patch",
+  },
   "catalog": {
     "@alchemy.run/node-utils": "0.0.5",
     "@aws-crypto/crc32": "^5.2.0",

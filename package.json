@@ -160,5 +160,8 @@
     "ts-morph": "^27.0.2",
     "typescript": "catalog:",
     "yaml": "^2.8.2"
+  },
+  "patchedDependencies": {
+    "@distilled.cloud/core@0.28.2": "patches/@distilled.cloud%2Fcore@0.28.2.patch"
   }
 }
