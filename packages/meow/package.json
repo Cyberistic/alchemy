@@ -1,0 +1,116 @@
+{
+  "name": "meow",
+  "version": "0.0.0",
+  "description": "Realtime primitives for Cloudflare Workers — Presence, Broadcast, Sync, and When. Named after cats because every server needs a name that doesn't take itself too seriously.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alchemy-run/alchemy-effect.git",
+    "directory": "packages/meow"
+  },
+  "files": [
+    "lib",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run",
+    "test:fast": "FAST=1 vitest run"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "bun": "./src/index.ts",
+      "worker": "./src/index.ts",
+      "import": "./lib/index.js",
+      "default": "./lib/index.js"
+    },
+    "./core": {
+      "types": "./src/core/index.ts",
+      "bun": "./src/core/index.ts",
+      "worker": "./src/core/index.ts",
+      "import": "./lib/core/index.js",
+      "default": "./lib/core/index.js"
+    },
+    "./alchemy": {
+      "types": "./src/alchemy/index.ts",
+      "bun": "./src/alchemy/index.ts",
+      "worker": "./src/alchemy/index.ts",
+      "import": "./lib/alchemy/index.js",
+      "default": "./lib/alchemy/index.js"
+    },
+    "./presence": {
+      "types": "./src/presence/index.ts",
+      "bun": "./src/presence/index.ts",
+      "worker": "./src/presence/index.ts",
+      "import": "./lib/presence/index.js",
+      "default": "./lib/presence/index.js"
+    },
+    "./presence/client": {
+      "types": "./src/presence/Client.ts",
+      "bun": "./src/presence/Client.ts",
+      "import": "./lib/presence/Client.js",
+      "default": "./lib/presence/Client.js"
+    },
+    "./presence/hooks": {
+      "types": "./src/presence/hooks.ts",
+      "bun": "./src/presence/hooks.ts",
+      "import": "./lib/presence/hooks.js",
+      "default": "./lib/presence/hooks.js"
+    },
+    "./sync": {
+      "types": "./src/sync/index.ts",
+      "bun": "./src/sync/index.ts",
+      "worker": "./src/sync/index.ts",
+      "import": "./lib/sync/index.js",
+      "default": "./lib/sync/index.js"
+    },
+    "./broadcast": {
+      "types": "./src/broadcast/index.ts",
+      "bun": "./src/broadcast/index.ts",
+      "worker": "./src/broadcast/index.ts",
+      "import": "./lib/broadcast/index.js",
+      "default": "./lib/broadcast/index.js"
+    },
+    "./when": {
+      "types": "./src/when/index.ts",
+      "bun": "./src/when/index.ts",
+      "worker": "./src/when/index.ts",
+      "import": "./lib/when/index.js",
+      "default": "./lib/when/index.js"
+    },
+    "./client": {
+      "types": "./src/client/index.ts",
+      "bun": "./src/client/index.ts",
+      "import": "./lib/client/index.js",
+      "default": "./lib/client/index.js"
+    }
+  },
+  "dependencies": {
+    "@distilled.cloud/cloudflare": "catalog:",
+    "alchemy": "workspace:*",
+    "effect": "catalog:"
+  },
+  "peerDependencies": {
+    "@cloudflare/workers-types": "catalog:",
+    "react": "^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "catalog:",
+    "@effect/vitest": "catalog:",
+    "@types/bun": "latest",
+    "@types/react": "^19.2.2",
+    "effect": "catalog:",
+    "react": "^19.2.4",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}
